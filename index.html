@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KP. — Portfolio</title>
+  <meta name="description"
+    content="Krish Parekh — B.Tech IT student specializing in building exceptional web applications and technical infrastructure." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo" id="logo-link">KP.</a>
+      <nav>
+        <ul id="nav-list">
+          <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+          <li><a href="#work" class="nav-link" id="nav-work">Work</a></li>
+          <li><a href="#resume" class="nav-link" id="nav-resume">Resume</a></li>
+          <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="overline reveal">HI, MY NAME IS</p>
+      <h1 class="hero-name reveal">Krish Parekh.</h1>
+      <h2 class="hero-sub reveal">I build precise digital<br />solutions.</h2>
+      <p class="hero-desc reveal">
+        I'm a B.Tech IT student specializing in building exceptional web applications
+        and technical infrastructure. Currently focused on <a href="#work">mastering full‑stack
+          development</a> and creating clean, accessible, human‑centered experiences.
+      </p>
+      <a href="#work" class="btn-primary reveal" id="btn-view-work">View My Work</a>
+    </div>
+    <div class="scroll-indicator" id="scroll-indicator">
+      <svg width="20" height="30" viewBox="0 0 20 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 2L10 28M10 28L3 21M10 28L17 21" stroke="#333" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <div class="section-label reveal">01 — About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-heading reveal">Who I Am</h2>
+          <p class="reveal">
+            Hello! I'm <strong>Krish Parekh</strong>, a passionate developer currently pursuing my B.Tech in
+            Information Technology. I love building things that live on the internet — from responsive
+            user interfaces to scalable backend systems.
+          </p>
+          <p class="reveal">
+            When I'm not coding, you'll find me exploring new technologies, contributing to open‑source
+            projects, or leveling up my design skills. I believe great software is built at the
+            intersection of engineering precision and thoughtful design.
+          </p>
+          <div class="about-stats reveal">
+            <div class="stat">
+              <span class="stat-num">10+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Years Coding</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image-wrap reveal">
+          <div class="about-image-box">
+            <div class="initials-avatar">KP</div>
+          </div>
+          <div class="accent-block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-label reveal">02 — Skills</div>
+      <h2 class="section-heading reveal">What I Work With</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Backend</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Tools & Others</h3>
+          <div class="skill-tags">
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WORK ─── -->
+  <section id="work" class="section">
+    <div class="section-inner">
+      <div class="section-label reveal">03 — Work</div>
+      <h2 class="section-heading reveal">Selected Projects</h2>
+      <div class="projects-grid">
+
+        <article class="project-card reveal" id="project-3">
+          <div class="project-number">01</div>
+          <div class="project-info">
+            <h3 class="project-title">Developer Portfolio</h3>
+            <p class="project-desc">
+              This very portfolio — a clean, accessible, and responsive personal website showcasing
+              projects, skills, and experience with smooth interactions.
+            </p>
+            <div class="project-stack">
+              <span class="tag-sm">HTML</span>
+              <span class="tag-sm">CSS</span>
+              <span class="tag-sm">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link" id="proj3-github">GitHub →</a>
+            <a href="#" class="project-link accent" id="proj3-live">Live →</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal" id="project-4">
+          <div class="project-number">02</div>
+          <div class="project-info">
+            <h3 class="project-title">n8n AI Video Workflow</h3>
+            <p class="project-desc">
+              Automated n8n workflow that generates AI‑powered YouTube videos including tags,
+              thumbnails, and SEO optimization for maximum virality.
+            </p>
+            <div class="project-stack">
+              <span class="tag-sm">n8n</span>
+              <span class="tag-sm">AI APIs</span>
+              <span class="tag-sm">JSON</span>
+              <span class="tag-sm">Automation</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link" id="proj4-github">GitHub →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── RESUME ─── -->
+  <section id="resume" class="section section-alt">
+    <div class="section-inner">
+      <div class="section-label reveal">04 — Resume</div>
+      <h2 class="section-heading reveal">Education</h2>
+      <div class="timeline">
+
+        <div class="timeline-group reveal">
+          <h3 class="timeline-group-title">Education</h3>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2022 — Present</div>
+              <h4 class="timeline-role">B.Tech in Information Technology</h4>
+              <p class="timeline-org">Dharmsinh Desai University</p>
+              <p class="timeline-desc">Studying core CS fundamentals, data structures, algorithms, web development,
+                cloud computing, and AI/ML.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2023 — 2025</div>
+              <h4 class="timeline-role">Higher Secondary Education (12th)</h4>
+              <p class="timeline-org">Shri Ram Vidhyalaya</p>
+              <p class="timeline-desc">Science stream with Computer Science, Mathematics and Physics.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="resume-cta reveal">
+        <a href="#" class="btn-primary" id="btn-download-resume">Download Resume ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact" class="section">
+    <div class="section-inner contact-inner">
+      <div class="section-label reveal">05 — Contact</div>
+      <h2 class="section-heading reveal">Let's Work Together</h2>
+      <p class="contact-intro reveal">
+        Have a project in mind or just want to say hi? My inbox is always open.
+        I'll try my best to get back to you!
+      </p>
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..."
+            required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" id="btn-send-message">Send Message →</button>
+        <p class="form-success" id="form-success">✓ Message sent! I'll be in touch soon.</p>
+        <p class="form-error" id="form-error">✗ Something went wrong. Please try again.</p>
+      </form>
+      <div class="social-links reveal">
+        <a href="mailto:krish@example.com" class="social-link" id="social-email">Email</a>
+        <a href="https://github.com/" target="_blank" rel="noopener" class="social-link" id="social-github">GitHub</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-link"
+          id="social-linkedin">LinkedIn</a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener" class="social-link"
+          id="social-twitter">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="logo">KP.</span>
+      <span class="footer-copy">© 2026 Krish Parekh. Designed & Built with ❤️</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
