@@ -68,7 +68,6 @@ revealEls.forEach(el => revealObserver.observe(el));
     'precise digital solutions.',
     'full-stack web apps.',
     'clean user experiences.',
-    'scalable backend systems.',
   ];
 
   const heroSub = document.querySelector('.hero-sub');
