@@ -177,6 +177,26 @@ function showMsg(el, text) {
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
+
+  const emailInput = document.getElementById('email');
+  const emailError = document.getElementById('email-error');
+  emailError.classList.remove('show');
+
+  if (!emailInput.value.trim()) {
+    showMsg(emailError, '✗ Please enter your email address.');
+    return;
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim())) {
+    showMsg(emailError, '✗ Please enter a valid email address.');
+    return;
+  }
+
+  if (!form.checkValidity()) {
+    showMsg(formError, '✗ Please fill out all required fields.');
+    return;
+  }
+
   const btn = form.querySelector('button[type="submit"]');
   const original = btn.textContent;
   formSuccess.classList.remove('show');
