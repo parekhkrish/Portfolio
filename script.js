@@ -2,6 +2,24 @@
    PORTFOLIO — script.js
 ================================================================ */
 
+/* ── Theme Toggle ─────────────────────────────────────────────── */
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+if (currentTheme === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+  let theme = document.documentElement.getAttribute('data-theme');
+  if (theme === 'dark') {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+});
 
 /* ── Navbar: scroll state + active link ───────────────────────── */
 const navbar = document.getElementById('navbar');
@@ -249,6 +267,21 @@ document.addEventListener('keydown', e => {
     navList.classList.remove('open');
     document.body.style.overflow = '';
   }
+});
+
+/* ── Back to Top Button ───────────────────────────────────────── */
+const backToTopBtn = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 500) {
+    backToTopBtn.classList.add('show');
+  } else {
+    backToTopBtn.classList.remove('show');
+  }
+}, { passive: true });
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 console.log('%c KP. Portfolio ', 'background:#e04e2a;color:#fff;font-weight:900;font-size:14px;padding:6px 10px;border-radius:4px;');

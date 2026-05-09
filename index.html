@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="style.css" />
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Devicon for Skill Icons -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
@@ -30,6 +32,24 @@
           <li><a href="#resume" class="nav-link" id="nav-resume">Resume</a></li>
           <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
         </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
         </button>
@@ -110,28 +130,28 @@
         <div class="skill-category reveal">
           <h3 class="skill-cat-title">Frontend</h3>
           <div class="skill-tags">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">React</span>
+            <span class="tag"><i class="devicon-html5-plain"></i> HTML5</span>
+            <span class="tag"><i class="devicon-css3-plain"></i> CSS3</span>
+            <span class="tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
+            <span class="tag"><i class="devicon-react-original"></i> React</span>
           </div>
         </div>
 
         <div class="skill-category reveal">
           <h3 class="skill-cat-title">Backend</h3>
           <div class="skill-tags">
-            <span class="tag">Python</span>
-            <span class="tag">C++</span>
-            <span class="tag">C</span>
+            <span class="tag"><i class="devicon-python-plain"></i> Python</span>
+            <span class="tag"><i class="devicon-cplusplus-plain"></i> C++</span>
+            <span class="tag"><i class="devicon-c-plain"></i> C</span>
           </div>
         </div>
         <div class="skill-category reveal">
           <h3 class="skill-cat-title">Tools & Others</h3>
           <div class="skill-tags">
-            <span class="tag">Git & GitHub</span>
-            <span class="tag">VS Code</span>
-            <span class="tag">Figma</span>
-            <span class="tag">Linux</span>
+            <span class="tag"><i class="devicon-github-original"></i> Git & GitHub</span>
+            <span class="tag"><i class="devicon-vscode-plain"></i> VS Code</span>
+            <span class="tag"><i class="devicon-figma-plain"></i> Figma</span>
+            <span class="tag"><i class="devicon-linux-plain"></i> Linux</span>
           </div>
         </div>
 
@@ -262,9 +282,12 @@
       </form>
       <div class="social-links reveal">
         <a href="mailto:parekhkrish02@gmail.com" class="social-link" id="social-email">Email</a>
-        <a href="https://github.com/parekhkrish" target="_blank" rel="noopener" class="social-link" id="social-github">GitHub</a>
-        <a href="https://www.linkedin.com/in/krish-parekh-590b2038a/" target="_blank" rel="noopener" class="social-link" id="social-linkedin">LinkedIn</a>
-        <a href="https://sites.google.com/ddu.ac.in/krish-parekh/home?authuser=3" class="social-link" id="social-cv">CV</a>
+        <a href="https://github.com/parekhkrish" target="_blank" rel="noopener" class="social-link"
+          id="social-github">GitHub</a>
+        <a href="https://www.linkedin.com/in/krish-parekh-590b2038a/" target="_blank" rel="noopener" class="social-link"
+          id="social-linkedin">LinkedIn</a>
+        <a href="https://sites.google.com/ddu.ac.in/krish-parekh/home?authuser=3" class="social-link"
+          id="social-cv">CV</a>
       </div>
     </div>
   </section>
@@ -276,6 +299,14 @@
       <span class="footer-copy">© 2026 Krish Parekh. Designed & Built with ❤️</span>
     </div>
   </footer>
+
+  <!-- ─── BACK TO TOP ─── -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
 
   <script src="script.js"></script>
 </body>
