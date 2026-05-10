@@ -541,20 +541,38 @@ nav ul {
   font-weight: 500;
   padding: 6px 14px;
   border-radius: 100px;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition: background 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease), transform 0.25s var(--ease), box-shadow 0.3s var(--ease);
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
 }
 
 .tag i {
   font-size: 1.1rem;
 }
 
+.tag-link-icon {
+  font-size: 0.7rem;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+  margin-left: -2px;
+}
+
+.tag:hover .tag-link-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .tag:hover {
   background: var(--accent);
   color: #fff;
   border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 78, 42, 0.3);
 }
 
 .tag-sm {
